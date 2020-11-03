@@ -1,0 +1,24 @@
+{
+  "name": "nodeexpresspsql",
+  "version": "1.0.0",
+  "description": "servidor de imagenes",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ftaboada/imgdbserver.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ftaboada/imgdbserver/issues"
+  },
+  "homepage": "https://github.com/ftaboada/imgdbserver#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6"
+  }
+}

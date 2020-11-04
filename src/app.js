@@ -19,6 +19,8 @@ const options = {
   },
 };
 
+server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
+server.use(bodyParser.json({ limit: "50mb" }));
 server.name = "Rapaz";
 server.use(morgan("dev"));
 server.use(express.static("public", options));

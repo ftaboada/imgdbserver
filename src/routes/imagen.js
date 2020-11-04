@@ -1,6 +1,7 @@
 const express = require("express");
 const fileUpload = require("express-fileupload");
-var fs = require("fs");
+const { dir } = require("./dirMiddleware");
+const fs = require("fs");
 
 const router = express();
 
@@ -22,13 +23,13 @@ router.post("/upload", function (req, res) {
   });
 });
 //borrar imagen
-router.delete("/:nombre", async (req, res) => {
+router.delete("/delete", async (req, res) => {
   try {
-    const nombre = req.params.nombre;
-    fs.unlinkSync(`/public/${nombre}`);
+    const nombre = req.query.nombre;
+    fs.unlinkSync(dir + `/${nombre}`);
     res.send("imagen eliminada");
   } catch (err) {
-    res.status(400).send(err);
+    res.status(400).send("no se encontró la imagen a borrar");
   }
 });
 

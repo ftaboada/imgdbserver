@@ -52,6 +52,7 @@ Usuario.hasMany(Mensaje);
 // relacion carrito-usuario
 //Usuario.hasMany(Carrito);
 //Carrito.belongsTo(Usuario);
+Categoria.hasOne(Galeria);
 Galeria.belongsTo(Categoria);
 //Carrito.hasMany(LineaDeOrden);
 Galeria.hasMany(Imagen);

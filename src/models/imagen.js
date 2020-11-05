@@ -29,7 +29,7 @@ module.exports = (sequelize) => {
       allowNull: validations.allowNull,
       validate: validations.strType,
     },
-    heigth: {
+    height: {
       type: DataTypes.FLOAT,
       allowNull: validations.allowNull,
       validate: validations.intType,
